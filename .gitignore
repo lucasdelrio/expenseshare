@@ -1,0 +1,11 @@
+.DS_Store
+redo-iphone.xcworkspace/xcuserdata/
+redo-iphone.xcodeproj/xcuserdata
+redo-iphone.xcodeproj/project.xcworkspace/xcuserdata
+redo-ios.xcodeproj/xcuserdata/
+redo-ios.xcworkspace/xcuserdata/
+Build/
+Pods/Pods.xcodeproj/xcuserdata
+integration/tmp
+Pods/
+automation_results

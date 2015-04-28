@@ -168,11 +168,11 @@
 				D764BA0D1AEB934100FD3F82 /* AccountViewController.swift */,
 				D741EA571AE9BA27000C42D7 /* ExpenseDetailViewController.swift */,
 				D741EA531AE9B7DC000C42D7 /* ExpenseListViewController.swift */,
+				D711B2E81AEEC9DC00971DF2 /* LocalStorage.swift */,
 				D764BA131AEC01F300FD3F82 /* Images.xcassets */,
 				D741EA171AE99F1A000C42D7 /* LaunchScreen.xib */,
 				D741EA0C1AE99F1A000C42D7 /* Supporting Files */,
 				D741EA501AE9B2FB000C42D7 /* Expenseshare-Bridging-Header.h */,
-				D711B2E81AEEC9DC00971DF2 /* LocalStorage.swift */,
 			);
 			path = Expenseshare;
 			sourceTree = "<group>";

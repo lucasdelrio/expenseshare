@@ -37,8 +37,8 @@ class SignUpSignInViewController: UIViewController, UITextFieldDelegate {
         
         if let user = defaults.objectForKey(User) as? String {
             loading(true)
-            signUpSignInContainer.hidden = true
-            forgotPasswordButton.hidden = true
+//            signUpSignInContainer.hidden = true
+//            forgotPasswordButton.hidden = true
             
             let password = defaults.objectForKey(Password) as! String
             loginWithUser(user, password: password, saveUserAndPass: false)
@@ -81,7 +81,7 @@ class SignUpSignInViewController: UIViewController, UITextFieldDelegate {
                     self.performSegueWithIdentifier("signInToApplication", sender: self)
                 }
             } else {
-                self.activityIndicator.stopAnimating()
+                self.loading(false)
                 self.messageLabel.hidden = false
                 
                 if let message: AnyObject = error!.userInfo!["error"] {

@@ -9,7 +9,7 @@
 import UIKit
 
 class ExpenseListViewController: PFQueryTableViewController {
-        
+    
     // Initialise PFQueryTable tableview
     override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
@@ -28,7 +28,9 @@ class ExpenseListViewController: PFQueryTableViewController {
     // Define the query that will provide data for the table view
     override func queryForTable() -> PFQuery {
         var expensesQuery = PFQuery(className: "Expenses")
-        expensesQuery.orderByAscending("expenseTitle")
+        expensesQuery.orderByDescending("createdAt")
+        var userQuery = PFUser.query()
+        userQuery!.whereKey("email", matchesKey:"\(PFUser.currentUser()!.email)", inQuery:expensesQuery)
         return expensesQuery
     }
     
@@ -46,9 +48,6 @@ class ExpenseListViewController: PFQueryTableViewController {
         if let expenseComment = object["expenseComment"] as? String {
             cell?.detailTextLabel?.text = expenseComment
         }
-//        if let expensePrice = object["expensePrice"] as? String {
-//            cell?.detailTextLabel?.text = expensePrice
-//        }
         
         return cell
     }
@@ -71,6 +70,7 @@ class ExpenseListViewController: PFQueryTableViewController {
     // Refresh table to ensure any data changes are displayed
     override func viewDidAppear(animated: Bool) {
         tableView.reloadData()
+        refreshControl?.endRefreshing()
     }
     
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3B34AD5B-F7DC-4967-AA24-623A3A1EF11E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Expenseshare</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BEDAD310E079F6BA11EE769D5CB1D1A0E230FA27</key>
+		<string>github.com:lucasdelrio/expenseshare.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Expenseshare.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BEDAD310E079F6BA11EE769D5CB1D1A0E230FA27</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:lucasdelrio/expenseshare.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BEDAD310E079F6BA11EE769D5CB1D1A0E230FA27</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BEDAD310E079F6BA11EE769D5CB1D1A0E230FA27</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Expenseshare</string>
+		</dict>
+	</array>
+</dict>
+</plist>

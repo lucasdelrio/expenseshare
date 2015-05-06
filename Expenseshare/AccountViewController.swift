@@ -15,10 +15,8 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
     // UI Elements
     @IBOutlet var accountView: UIView!
     @IBOutlet weak var accountCredentialsContainer: UIView!
-    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailAddressTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +24,11 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         accountView.layer.cornerRadius = 8
         accountCredentialsContainer.layer.cornerRadius = 8
         accountCredentialsContainer.layer.masksToBounds = true
-        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 5.45
-        self.profileImageView.clipsToBounds = true
         
         // Unwrap current user
         if let currentUser = PFUser.currentUser() {
             usernameTextField.text = currentUser.email
             emailAddressTextField.text = currentUser.email
-            passwordTextField.text = currentUser.password
         }
     }
 
@@ -48,7 +43,6 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         if let userObject = currentUser {
             currentUser?.username = usernameTextField.text
             currentUser?.email = emailAddressTextField.text.lowercaseString
-            currentUser?.password = passwordTextField.text
             
             // Save data back to server in background
             userObject.saveEventually(nil)
@@ -58,7 +52,6 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
             var userObjectUpdate = PFUser()
             userObjectUpdate.username = usernameTextField.text
             userObjectUpdate.email = emailAddressTextField.text.lowercaseString
-            userObjectUpdate.password = passwordTextField.text
             
             // Save data back to server in background
             userObjectUpdate.saveEventually()
